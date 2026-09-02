@@ -1,33 +1,27 @@
-<html>
-    <head>
-        My beautifull page
-    </head>
-    <body>
-        <h1>Welcome to my beautifull page</h1>
-        <td>
-            <p>Hi</p>
-            <a href = "about.html" class="button"> about me</a>
-            <a href="dashboard.html" class="button"> Dashbored</a>
-            <a href="why-it.html" class="button">Why IT??</a>
-            <a href="blog.html" class="button"> Blogje</a>
-        </td>
-    </body>
-</html>
-<style>
-    h1 {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-    .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-family: sans-serif;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My beautifull page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Shared navigation bar. Copy this same block into every page,
+         and move the "active" class to the link for that page. -->
+    <nav class="site-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="why-it.html">Why IT?</a>
+        <a href="blog.html">Blog</a>
+        <a href="direction.html">Direction</a>
+        <a href="goals.html">Goals</a>
+    </nav>
 
-    .button:hover {
-        background-color: #45a049;
-    }
-</style>
+    <main>
+        <h1>Welcome to my beautifull page</h1>
+        <p>Hi</p>
+    </main>
+</body>
+</html>

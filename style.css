@@ -1,0 +1,45 @@
+/* Shared stylesheet for the whole site.
+   The navigation bar lives here so every page shares one look. */
+
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main {
+    padding: 20px;
+}
+
+/* ---- Navigation bar ---- */
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 20px;
+    background-color: #333;
+}
+
+.site-nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f86f0e;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-family: sans-serif;
+}
+
+.site-nav a:hover {
+    background-color: #2200ff;
+}
+
+/* The link for the page you are currently on */
+.site-nav a.active {
+    background-color: #2e7d32;
+    font-weight: bold;
+}
