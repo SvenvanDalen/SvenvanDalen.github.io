@@ -53,6 +53,16 @@ main {
     margin-bottom: 16px;
 }
 
+/* ---- Home / landing page ---- */
+.hz-image {
+    max-width: 100%;
+    width: 480px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 20px;
+}
+
 .social-links {
     list-style: none;
     padding: 0;
