@@ -96,9 +96,10 @@ main {
     display: flex;
 }
 
-/* One quarter label sitting beside its group of rows. */
+/* One quarter: the label sits beside its group of rows.
+   Each .board-group stacks under the previous one because .board is a column. */
 .board-group {
-    display: flex;
+    display: flex; /* row: quarter label | rows */
 }
 
 /* The rows that belong to a single quarter fill the space next to the label. */
@@ -126,11 +127,19 @@ main {
     flex: 0 0 60px;
 }
 
-/* Fixed-width quarter column so the label lines up with the header. */
+/* Fixed-width quarter column. In a .board-group it stretches to the full
+   height of the 3 rows next to it (flex items stretch by default), so one
+   label covers all 3 rows. */
 .cell-quarter {
     flex: 0 0 100px;
     display: flex;
     align-items: center;
+}
+
+/* Make the quarter label in a group stand out a bit. */
+.board-group > .cell-quarter {
+    font-weight: bold;
+    background-color: #f2f2f2;
 }
 
 .board-head {
