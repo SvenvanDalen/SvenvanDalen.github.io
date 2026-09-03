@@ -20,36 +20,44 @@
     </nav>
 
     <main>
-        <!--Dashboard is one big table holding info over entire year-->
+        <!-- Dashboard: an overview of the whole year, laid out with flexbox
+             instead of a <table>. Each ".board-row" is a flex row of cells;
+             a ".board-group" keeps one quarter label next to its rows. -->
         <h1>Here comes the dashboard page</h1>
-        <table>
-            <tr>
-                <th>Quarter</th>
-                <th>Course</th>
-                <th>EC</th>
-                <th>Exam</th>
-                <th>Grades</th>     
-            </tr>
-            <tr>
-                <td rowspan="3"> Q1</td>
-                <td>PCO</td>
-                <td>5</td>
-                <td>Assignment</td>
-                <td>Definetly a 10</td>
-            </tr>
-            <tr>
-                <td>Programming basics</td>
-                <td>5</td>
-                <td>Assignment</td>
-                <td>probably also a 10</td>
-            </tr>
-            <tr>
-                <td>computer basics</td>
-                <td>5</td>
-                <td>Test</td>
-                <td>magically a 11</td>
-            </tr>
-        </table>
+
+        <div class="board">
+            <div class="board-row board-head">
+                <div class="cell cell-quarter">Quarter</div>
+                <div class="cell">Course</div>
+                <div class="cell cell-ec">EC</div>
+                <div class="cell">Exam</div>
+                <div class="cell">Grades</div>
+            </div>
+
+            <div class="board-group">
+                <div class="cell cell-quarter">Q1</div>
+                <div class="board-group-rows">
+                    <div class="board-row">
+                        <div class="cell">PCO</div>
+                        <div class="cell cell-ec">5</div>
+                        <div class="cell">Assignment</div>
+                        <div class="cell">Definetly a 10</div>
+                    </div>
+                    <div class="board-row">
+                        <div class="cell">Programming basics</div>
+                        <div class="cell cell-ec">5</div>
+                        <div class="cell">Assignment</div>
+                        <div class="cell">probably also a 10</div>
+                    </div>
+                    <div class="board-row">
+                        <div class="cell">computer basics</div>
+                        <div class="cell cell-ec">5</div>
+                        <div class="cell">Test</div>
+                        <div class="cell">magically a 11</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>

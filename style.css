@@ -82,12 +82,58 @@ main {
 .social-links a:hover {
     background-color: #2200ff;
 }
-table {
-border-collapse: collapse; /* Merge adjacent borders */
-width: 100%; /* Optional: Full-width table */
+/* ---- Dashboard board (flexbox instead of a <table>) ---- */
+.board {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-bottom: 0; /* each row draws its own bottom border */
+    width: 100%;
 }
-th, td {
-border: 1px solid black; /* Add borders to all cells */
-padding: 8px; /* Optional: Add padding for better readability */
-text-align: left; /* Align text to the left */
+
+/* A row of cells. */
+.board-row {
+    display: flex;
+}
+
+/* One quarter label sitting beside its group of rows. */
+.board-group {
+    display: flex;
+}
+
+/* The rows that belong to a single quarter fill the space next to the label. */
+.board-group-rows {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.cell {
+    flex: 1; /* every column shares the width evenly by default */
+    padding: 8px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    text-align: left;
+}
+
+.board-row .cell:last-child,
+.board-group-rows .cell:last-child {
+    border-right: 0;
+}
+
+/* Narrow column for the EC number. */
+.cell-ec {
+    flex: 0 0 60px;
+}
+
+/* Fixed-width quarter column so the label lines up with the header. */
+.cell-quarter {
+    flex: 0 0 100px;
+    display: flex;
+    align-items: center;
+}
+
+.board-head {
+    font-weight: bold;
+    background-color: #f2f2f2;
 }
