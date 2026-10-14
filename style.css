@@ -44,6 +44,24 @@ main {
     font-weight: bold;
 }
 
+/* ---- Footer with external links ---- */
+.site-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 20px;
+    background-color: #333;
+}
+
+.site-footer a {
+    color: white;
+    font-family: sans-serif;
+}
+
+.site-footer a:hover {
+    color: #f86f0e;
+}
+
 /* ---- Profile / About page ---- */
 .profile-photo {
     max-width: 240px;
@@ -82,6 +100,7 @@ main {
 .social-links a:hover {
     background-color: #2200ff;
 }
+
 /* ---- Dashboard board (flexbox instead of a <table>) ---- */
 .board {
     display: flex;
@@ -145,6 +164,72 @@ main {
 .board-head {
     font-weight: bold;
     background-color: #f2f2f2;
+}
+
+/* Narrow column for the grade. */
+.cell-grade {
+    flex: 0 0 70px;
+    font-weight: bold;
+}
+
+/* Status of a course: change the class on the row to change its color. */
+.passed  { background-color: #edf7ee; }
+.failed  { background-color: #fdeeee; }
+.pending { background-color: white; }
+
+.board-row.passed .cell-grade { color: #2e7d32; }
+.board-row.failed .cell-grade { color: #c62828; }
+.board-row.pending .cell-grade { color: #888; }
+
+/* Legend that explains the colors. */
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.legend li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-box {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid black;
+}
+
+.legend-box.passed { background-color: #a5d6a7; }
+.legend-box.failed { background-color: #ef9a9a; }
+
+/* Progress bar: obtained EC out of 60, with a line at the 45 EC BSA limit. */
+.progress {
+    position: relative;
+    height: 28px;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: #f2f2f2;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0;
+    height: 100%;
+    background-color: #2e7d32;
+}
+
+/* 45 / 60 = 75% of the bar. */
+.progress-bsa {
+    position: absolute;
+    top: 0;
+    left: 75%;
+    width: 3px;
+    height: 100%;
+    background-color: #f86f0e;
 }
 
 /* ---- Goals page ---- */

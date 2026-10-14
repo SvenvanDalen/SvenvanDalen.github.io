@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <script src="dashboard.js" defer></script>
 </head>
 <body>
-    <!-- Shared navigation bar. Copy this same block into every page,
-         and move the "active" class to the link for that page. -->
     <nav class="site-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -22,8 +21,35 @@
     <main>
         <!-- Dashboard: an overview of the whole year, laid out with flexbox
              instead of a <table>. Each ".board-row" is a flex row of cells;
-             a ".board-group" keeps one quarter label next to its rows. -->
-        <h1>Here comes the dashboard page</h1>
+             a ".board-group" keeps one quarter label next to its rows.
+             To add a result: change the row class from "pending" to "passed"
+             or "failed" and put the grade in the last cell. dashboard.js
+             counts the EC of every "passed" row for the progress bar. -->
+        <h1>My first year of HBO-ICT</h1>
+        <p>
+            All courses of year 1 (2026-2027) in the order I take them. The
+            courses and tests come from the Implementation Regulations (IR) of
+            HZ ICT. Each course has one test; the week shows the block and week
+            of the first try and the resit.
+        </p>
+
+        <h2>Study progress</h2>
+        <div class="progress">
+            <div class="progress-fill" id="progress-fill"></div>
+            <div class="progress-bsa" title="BSA line: 45 EC"></div>
+        </div>
+        <p class="progress-text">
+            <strong id="progress-ec">0</strong> of 60 EC obtained.
+            The line marks 45 EC: with fewer than 45 EC at the end of the year
+            I have to make a study plan with my study career coach (CER HZ,
+            article 8.2).
+        </p>
+
+        <ul class="legend">
+            <li><span class="legend-box passed"></span> Passed</li>
+            <li><span class="legend-box failed"></span> Failed</li>
+            <li><span class="legend-box pending"></span> Not done yet</li>
+        </ul>
 
         <div class="board">
             <div class="board-row board-head">
@@ -31,29 +57,33 @@
                 <div class="cell">Course</div>
                 <div class="cell cell-ec">EC</div>
                 <div class="cell">Exam</div>
-                <div class="cell">Grades</div>
+                <div class="cell">Week</div>
+                <div class="cell cell-grade">Grade</div>
             </div>
 
             <div class="board-group">
                 <div class="cell cell-quarter">Q1</div>
                 <div class="board-group-rows">
-                    <div class="board-row">
-                        <div class="cell">PCO</div>
+                    <div class="board-row pending">
+                        <div class="cell">Programme- &amp; Career Orientation</div>
                         <div class="cell cell-ec">5</div>
-                        <div class="cell">Assignment</div>
-                        <div class="cell">Definetly a 10</div>
+                        <div class="cell">Assignment (individual)</div>
+                        <div class="cell">B1.8, resit B2.4</div>
+                        <div class="cell cell-grade">-</div>
                     </div>
-                    <div class="board-row">
-                        <div class="cell">Programming basics</div>
+                    <div class="board-row pending">
+                        <div class="cell">Programming Basics</div>
                         <div class="cell cell-ec">5</div>
-                        <div class="cell">Assignment</div>
-                        <div class="cell">probably also a 10</div>
+                        <div class="cell">Assignment (individual)</div>
+                        <div class="cell">B1.8, resit B2.8</div>
+                        <div class="cell cell-grade">-</div>
                     </div>
-                    <div class="board-row">
-                        <div class="cell">computer basics</div>
+                    <div class="board-row pending">
+                        <div class="cell">Computer Science Basics</div>
                         <div class="cell cell-ec">5</div>
-                        <div class="cell">Test</div>
-                        <div class="cell">magically a 11</div>
+                        <div class="cell">Written knowledge test</div>
+                        <div class="cell">B1.8, resit B2.9</div>
+                        <div class="cell cell-grade">-</div>
                     </div>
                 </div>
             </div>
@@ -61,23 +91,26 @@
             <div class="board-group">
                 <div class="cell cell-quarter">Q2</div>
                 <div class="board-group-rows">
-                    <div class="board-row">
-                        <div class="cell">?</div>
+                    <div class="board-row pending">
+                        <div class="cell">Object Oriented Programming</div>
                         <div class="cell cell-ec">5</div>
-                        <div class="cell">Assignment</div>
-                        <div class="cell"></div>
+                        <div class="cell">Assignment (individual)</div>
+                        <div class="cell">B2.8, resit B2.10</div>
+                        <div class="cell cell-grade">-</div>
                     </div>
-                    <div class="board-row">
-                        <div class="cell">?</div>
+                    <div class="board-row pending">
+                        <div class="cell">Agile and Team Management</div>
                         <div class="cell cell-ec">5</div>
-                        <div class="cell">Assignment</div>
-                        <div class="cell"></div>
+                        <div class="cell">Assignment (individual)</div>
+                        <div class="cell">B2.8, resit B2.10</div>
+                        <div class="cell cell-grade">-</div>
                     </div>
-                    <div class="board-row">
-                        <div class="cell">?</div>
+                    <div class="board-row pending">
+                        <div class="cell">Project: Foundations</div>
                         <div class="cell cell-ec">5</div>
-                        <div class="cell">Test</div>
-                        <div class="cell"></div>
+                        <div class="cell">Portfolio</div>
+                        <div class="cell">B2.9, resit B3.1&ndash;B3.10</div>
+                        <div class="cell cell-grade">-</div>
                     </div>
                 </div>
             </div>
@@ -85,23 +118,26 @@
             <div class="board-group">
                 <div class="cell cell-quarter">Q3</div>
                 <div class="board-group-rows">
-                    <div class="board-row">
-                        <div class="cell">?</div>
+                    <div class="board-row pending">
+                        <div class="cell">Software Engineering Basics</div>
                         <div class="cell cell-ec">5</div>
-                        <div class="cell">Assignment</div>
-                        <div class="cell"></div>
+                        <div class="cell">Assignment (individual)</div>
+                        <div class="cell">B3.8, resit B3.10</div>
+                        <div class="cell cell-grade">-</div>
                     </div>
-                    <div class="board-row">
-                        <div class="cell">?</div>
+                    <div class="board-row pending">
+                        <div class="cell">Foundations of Data</div>
                         <div class="cell cell-ec">5</div>
-                        <div class="cell">Assignment</div>
-                        <div class="cell"></div>
+                        <div class="cell">Assignment (individual)</div>
+                        <div class="cell">B3.8, resit B3.10</div>
+                        <div class="cell cell-grade">-</div>
                     </div>
-                    <div class="board-row">
-                        <div class="cell">?</div>
+                    <div class="board-row pending">
+                        <div class="cell">Requirements Modelling</div>
                         <div class="cell cell-ec">5</div>
-                        <div class="cell">Test</div>
-                        <div class="cell"></div>
+                        <div class="cell">Assignment (individual)</div>
+                        <div class="cell">B3.8, resit B3.10</div>
+                        <div class="cell cell-grade">-</div>
                     </div>
                 </div>
             </div>
@@ -109,27 +145,38 @@
             <div class="board-group">
                 <div class="cell cell-quarter">Q4</div>
                 <div class="board-group-rows">
-                    <div class="board-row">
-                        <div class="cell">p?</div>
+                    <div class="board-row pending">
+                        <div class="cell">Web Application Development</div>
                         <div class="cell cell-ec">5</div>
-                        <div class="cell">Assignment</div>
-                        <div class="cell"></div>
+                        <div class="cell">Assignment (individual)</div>
+                        <div class="cell">B4.8, resit B4.10</div>
+                        <div class="cell cell-grade">-</div>
                     </div>
-                    <div class="board-row">
-                        <div class="cell">?</div>
+                    <div class="board-row pending">
+                        <div class="cell">Data Science Basics</div>
                         <div class="cell cell-ec">5</div>
-                        <div class="cell">Assignment</div>
-                        <div class="cell"></div>
+                        <div class="cell">Assignment (individual)</div>
+                        <div class="cell">B4.8, resit B4.10</div>
+                        <div class="cell cell-grade">-</div>
                     </div>
-                    <div class="board-row">
-                        <div class="cell">?</div>
+                    <div class="board-row pending">
+                        <div class="cell">Project: Applied Client Solutions</div>
                         <div class="cell cell-ec">5</div>
-                        <div class="cell">Test</div>
-                        <div class="cell"></div>
+                        <div class="cell">Portfolio</div>
+                        <div class="cell">B4.9, resit B4.10</div>
+                        <div class="cell cell-grade">-</div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
+    <footer class="site-footer">
+        <a href="https://hz.reader.docfield.com/0eb02280-92aa-47e8-9714-e3f866708e61" target="_blank" rel="noopener noreferrer">CER</a>
+        <a href="https://hz.reader.docfield.com/80871c39-9285-4b38-85e4-78a0efbc2461" target="_blank" rel="noopener noreferrer">IR HZ ICT</a>
+        <a href="https://learn.hz.nl/" target="_blank" rel="noopener noreferrer">Learn</a>
+        <a href="https://hz.osiris-student.nl/" target="_blank" rel="noopener noreferrer">Study progress</a>
+        <a href="https://github.com/HZ-HBO-ICT" target="_blank" rel="noopener noreferrer">HZ-HBO-ICT GitHub</a>
+    </footer>
 </body>
 </html>
