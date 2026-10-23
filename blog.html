@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav class="site-nav">
@@ -17,8 +17,71 @@
         <a href="goals.html">Goals</a>
     </nav>
 
-    <main>
-        <h1>Here comes the blog</h1>
+    <main class="blog-page">
+        <h1>Blog</h1>
+        <p class="why-intro">My journal about studying HBO-ICT. Latest posts first.</p>
+
+        <!-- The feed is one section; every post excerpt in it is an article,
+             because each excerpt makes sense on its own. -->
+        <section class="blog-feed">
+            <article class="post-excerpt">
+                <h2>
+                    <a href="ict-field.html">The ICT field of work</a>
+                </h2>
+                <p class="post-meta">
+                    <time datetime="2026-10-23">23 October 2026</time>
+                </p>
+                <p>
+                    ICT is not only found at software companies. What I see at
+                    Paree, an electrical engineering company where I am part of
+                    the software team.
+                </p>
+                <a href="ict-field.html" class="read-more">Read more&hellip;</a>
+            </article>
+
+            <article class="post-excerpt">
+                <h2>
+                    <a href="programming-experience.html">My programming experience</a>
+                </h2>
+                <p class="post-meta">
+                    <time datetime="2026-10-23">23 October 2026</time>
+                </p>
+                <p>
+                    I did not learn to program at school. From a puzzle at
+                    Paree to C# at work and a climb app on my watch, and the time
+                    I had to start over from scratch.
+                </p>
+                <a href="programming-experience.html" class="read-more">Read more&hellip;</a>
+            </article>
+
+            <article class="post-excerpt">
+                <h2>
+                    <a href="direction.html">Direction: where I see myself</a>
+                </h2>
+                <p class="post-meta">
+                    <time datetime="2026-10-14">14 October 2026</time>
+                </p>
+                <p>
+                    My first goal is to graduate. After that, I want to join a
+                    small software team and design backends and APIs.
+                </p>
+                <a href="direction.html" class="read-more">Read more&hellip;</a>
+            </article>
+
+            <article class="post-excerpt">
+                <h2>
+                    <a href="goals.html">Goals: my personal SWOT</a>
+                </h2>
+                <p class="post-meta">
+                    <time datetime="2026-10-14">14 October 2026</time>
+                </p>
+                <p>
+                    My strengths, weaknesses, opportunities and threats, and the
+                    two SMART goals I made from them.
+                </p>
+                <a href="goals.html" class="read-more">Read more&hellip;</a>
+            </article>
+        </section>
     </main>
 
     <footer class="site-footer">

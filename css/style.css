@@ -378,3 +378,71 @@ main {
 .story-card:last-child .story-label {
     background-color: #2e7d32;
 }
+/* ---- Blog ---- */
+.blog-page {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.blog-page h1 {
+    padding-bottom: 6px;
+    border-bottom: 3px solid #f86f0e;
+}
+
+/* The feed: one card per post excerpt, newest first. */
+.blog-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.post-excerpt {
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 6px solid #f86f0e;
+    background-color: #fafafa;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+.post-excerpt h2 {
+    margin: 0;
+}
+
+.post-excerpt h2 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.post-excerpt h2 a:hover {
+    color: #f86f0e;
+}
+
+/* Date line under the title of a post or excerpt. */
+.post-meta {
+    margin-top: 4px;
+    color: #888;
+    font-size: 0.9em;
+}
+
+.read-more {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* Screenshot or picture inside a blog post. */
+.post-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Link from a blog post back to the feed. */
+.back-link {
+    display: inline-block;
+    margin-top: 32px;
+    color: #2e7d32;
+    font-weight: bold;
+}

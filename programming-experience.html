@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My programming experience</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="why-it.html">Why IT?</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="direction.html">Direction</a>
+        <a href="goals.html">Goals</a>
+    </nav>
+
+    <main class="why-page">
+        <article>
+            <h1>My programming experience</h1>
+            <p class="post-meta">
+                <time datetime="2026-10-23">23 October 2026</time>
+            </p>
+
+            <p class="why-intro">I did not learn to program at school. I learned it by doing.</p>
+
+            <h2>How it started</h2>
+            <p>
+                After I stopped my study at the TU, I applied for a job at
+                Paree, through someone I knew there. Soon after I started, they
+                gave me a logical problem they had been stuck on. I did not see
+                the answer straight away. So I did what I still do today: break
+                it down and take it step by step, until the problem simply was
+                not there anymore. That was the moment I knew I wanted to do
+                more with software.
+            </p>
+
+            <h2>What I do now</h2>
+            <p>
+                I still work at Paree, part-time next to my study at the HZ.
+                Paree is an electrical engineering company in industrial
+                automation, with a small software team, and I am part of that
+                team. I write C# to automate internal processes, so my
+                colleagues spend less time on repetitive work. Read more about
+                the company in my post about
+                <a href="ict-field.html">the ICT field of work</a>.
+            </p>
+
+            <h2>My own project: a climb app</h2>
+            <p>
+                Because I cycle a lot, I wanted to see the profile of a climb on
+                my watch while I am riding it. So I built it myself. The
+                screenshot below shows part of the Java code that finds the
+                climbs in a route: it walks over the points of the route and
+                checks the length and average gradient of every part that goes
+                up.
+            </p>
+            <img class="post-image"
+                 src="img/code.png"
+                 alt="Java code of a ClimbDetector class that finds climbs in a cycling route">
+
+            <h2>The lesson I learned the hard way</h2>
+            <p>
+                I started building the app right away, without thinking about
+                the architecture first. It worked for a while, but every new
+                feature made the code messier, until I could not add anything
+                without breaking something else. In the end I had to start over
+                completely. The second version is split into small parts, like
+                the climb package in the screenshot, and that makes it much
+                easier to keep building on. Now I think about the structure
+                before I write the first line.
+            </p>
+
+            <h2>How I learn</h2>
+            <ul>
+                <li>Documentation, to understand how something is meant to work</li>
+                <li>YouTube, to see how other developers approach a problem</li>
+                <li>AI, to get unstuck and to ask why something works</li>
+            </ul>
+
+            <h2>Building this website</h2>
+            <p>
+                HTML was quite easy to get into. CSS was harder: I often had AI
+                generate it for me. For this course I want to change that and
+                really understand the CSS I use, so I can build a layout myself
+                instead of only reading one.
+            </p>
+        </article>
+
+        <a href="blog.html" class="back-link">&larr; Back to the blog</a>
+    </main>
+
+    <footer class="site-footer">
+        <a href="https://hz.reader.docfield.com/0eb02280-92aa-47e8-9714-e3f866708e61" target="_blank" rel="noopener noreferrer">CER</a>
+        <a href="https://hz.reader.docfield.com/80871c39-9285-4b38-85e4-78a0efbc2461" target="_blank" rel="noopener noreferrer">IR HZ ICT</a>
+        <a href="https://learn.hz.nl/" target="_blank" rel="noopener noreferrer">Learn</a>
+        <a href="https://hz.osiris-student.nl/" target="_blank" rel="noopener noreferrer">Study progress</a>
+        <a href="https://github.com/HZ-HBO-ICT" target="_blank" rel="noopener noreferrer">HZ-HBO-ICT GitHub</a>
+    </footer>
+</body>
+</html>
