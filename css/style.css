@@ -392,6 +392,7 @@ main {
 }
 
 /* ---- Blog ---- */
+
 /* The feed: one card per post excerpt, newest first. */
 .blog-feed {
     display: flex;
